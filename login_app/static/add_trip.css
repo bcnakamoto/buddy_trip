@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-family: 'Cuprum', sans-serif;
+}
+
+#wrapper{
+    width: 970px;
+    height: auto;
+    background-color: rgb(5, 118, 194);
+    padding-bottom: 40px;
+    margin: auto;
+}
+
+.back{
+    margin: 0 5px 10px 800px;
+    font-size: 10pt;
+}
+
+.logout{
+    margin: 0 5px 10px 25px;
+    font-size: 10pt;
+}
+
+.messages{
+    margin: 10px 0 10px 40px;
+}
+
+h2{
+    margin: 20px 0 20px 25px;
+}
+
+#dest_div{
+    margin: 0 0 20px 25px;
+}
+
+#dest{
+    margin-left: 25px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    padding: 4px;
+}
+
+#plan_div{
+    margin: 0 0 20px 25px;
+}
+
+#plan{
+    margin-left: 73px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    padding: 4px;
+}
+
+#start_date_div{
+    margin: 0 0 20px 25px;
+}
+
+#start_date{
+    margin-left: 25px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    padding: 4px;
+}
+
+#end_date_div{
+    margin: 0 0 20px 25px;
+}
+
+#end_date{
+    margin-left: 46px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    padding: 4px;
+}
+
+button{
+    display: inline-block;
+    background-color: lightgrey;
+    color: black;
+    height: 30px;
+    width: 100px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    margin-top: 20px;
+    margin-left: 70px;
+    font-size: 12pt;
+}

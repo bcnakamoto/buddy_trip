@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trips Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'trips.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h2>Welcome, {{ request.session.user_name }}!</h2>
+            <a href="/logout" id="logout">Log Out</a>
+        </div>
+        <h4 id="myh4">Your Trip Schedules</h4>
+            <table id="my_trips">
+                <thead>
+                    <tr>
+                        <th>Destination</th>
+                        <th>Travel Start Date</th>
+                        <th>Travel End Date</th>
+                        <th>Plan</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for trip in my_trips %}
+                    <tr>
+                        <td>{{ trip.dest }}</td>
+                        <td>{{ trip.start_date }}</td>
+                        <td>{{ trip.end_date }}</td>
+                        <td>{{ trip.plan }}</td>
+                        <td><form action="/view" method=POST id="details_form">
+                            {% csrf_token %}
+                            <input type="hidden" name="details">
+                        <a href="/{{ trip.id }}/view">Details</a> | <form action="/cancel" method=POST id="cancel_form">
+                            {% csrf_token %}
+                            <input type="hidden" name="cancel">
+                        <a href="/{{ trip.id }}/cancel">Cancel</a> | <form action="/cancel" method=POST id="del_form">
+                            {% csrf_token %}
+                            <input type="hidden" name="delete">
+                        <a href="/{{ trip.id }}/delete">Delete</a>
+                        </form></td>
+                    </tr>
+                {% endfor %}
+                {% for trip in user.joiner.all %}
+                    <tr>
+                        <td>{{ trip.dest }}</td>
+                        <td>{{ trip.start_date }}</td>
+                        <td>{{ trip.end_date }}</td>
+                        <td>{{ trip.plan }}</td>
+                        <td><form action="/view" method=POST id="details_form">
+                            {% csrf_token %}
+                            <input type="hidden" name="details">
+                        <a href="/{{ trip.id }}/view">Details</a> | <form action="/cancel" method=POST id="cancel_form">
+                            {% csrf_token %}
+                            <input type="hidden" name="cancel">
+                        <a href="/{{ trip.id }}/cancel">Cancel</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <form action="/add-trip" method=GET>
+                {% csrf_token %}
+                <input type="hidden" name="add_trip">
+                <button type="submit">Add a New Trip</button>
+            </form>
+        <div>
+            <h4 id="otherh4">Other Users' Travel Plans</h4>
+            <table id="other_trips">
+                <thead>
+                    <tr>
+                        <th>Destination</th>
+                        <th>Travel Start Date</th>
+                        <th>Travel End Date</th>
+                        <th>Do You Want to Join?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for trip in other_trips %}
+                    <tr>
+                        <td>{{ trip.dest }}</td>
+                        <td>{{ trip.start_date }}</td>
+                        <td>{{ trip.end_date }}</td>
+                        <td><form action="/{{ trip.id }}/join" method='POST' id="join_form">
+                            {% csrf_token %}
+                            <input type="hidden" name="join">
+                        <a href="/{{ trip.id }}/join">Join</a> | <form action="/{{ trip.id }}/view" method=POST id="details_form">
+                            {% csrf_token %}
+                            <input type="hidden" name="details">
+                        <a href="/{{ trip.id }}/view">Details</a>
+                        </form></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-family: 'Cuprum', sans-serif;
+}
+
+#wrapper{
+    width: 970px;
+    height: auto;
+    background-color: rgb(5, 118, 194);
+    padding-bottom: 40px;
+    margin: auto;
+}
+
+.back{
+    margin: 0 5px 10px 800px;
+    font-size: 10pt;
+}
+
+.logout{
+    margin: 0 5px 10px 25px;
+    font-size: 10pt;
+}
+
+h2{
+    margin-left: 25px;
+}
+
+p{
+    display: inline-block;
+}
+
+.details{
+    margin: 10px 0 10px 35px;
+}
+
+#joiners{
+    margin-top: 50px;
+}

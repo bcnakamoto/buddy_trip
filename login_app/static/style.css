@@ -1,0 +1,107 @@
+*{
+    margin: auto;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-family: 'Cuprum', sans-serif;
+}
+
+#wrapper{
+    width: 970px;
+    height: 500px;
+    background-color: mediumpurple;
+}
+
+h1{
+    margin: 0 0 20px 30px;
+}
+
+#reg_div{
+    width: 450px;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+#login_div{
+    width: 450px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+input{
+    height: 25px;
+}
+
+#first_name{
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    margin: 10px 0 5px 15px;
+}
+
+#last_name{
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    margin: 5px 0 5px 16px;
+}
+
+#reg_email{
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    margin: 5px 0 5px 53px;
+}
+
+#user_name{
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    margin: 5px 0 5px 19px;
+}
+
+#reg_password{
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    margin: 5px 0 5px 23px;
+}
+
+#pw_confirmation{
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    margin: 5px 0 5px 7px;
+}
+
+#login_username{
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    margin: 5px 0 5px 11px;    
+}
+
+#login_password{
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    margin: 5px 0 5px 15px;
+}
+
+#reg_btn{
+    display: inline-block;
+    background-color: lightgrey;
+    color: black;
+    height: 25px;
+    width: 75px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    margin-top: 20px;
+    margin-left: 70px;
+    font-size: 12pt;
+}
+
+#login_btn{
+    display: inline-block;
+    background-color: lightgrey;
+    color: black;
+    height: 25px;
+    width: 50px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    margin-top: 20px;
+    margin-left: 70px;
+    font-size: 12pt;
+}
